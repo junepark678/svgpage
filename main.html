@@ -1,0 +1,2910 @@
+<meta charset="UTF-8">
+<style type="text/css">
+        @font-face {
+            font-family: "Atlassian Icons";
+            src: url(http://aui-cdn.atlassian.com/aui-adg/5.9.6/css/fonts/atlassian-icons.eot);
+            src: url(http://aui-cdn.atlassian.com/aui-adg/5.9.6/css/fonts/atlassian-icons.eot?#iefix) format("embedded-opentype"), url(http://aui-cdn.atlassian.com/aui-adg/5.9.6/css/fonts/atlassian-icons.woff) format("woff"), url(http://aui-cdn.atlassian.com/aui-adg/5.9.6/css/fonts/atlassian-icons.ttf) format("truetype"), url(http://aui-cdn.atlassian.com/aui-adg/5.9.6/css/fonts/atlassian-icons.svg#atlassian-icons) format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+        #bit-booster-tbl, #bit-booster-tbl * { line-height: 1.0; font-family: monospace; border-spacing: 0; margin:0; border: 0; padding: 0; font-size: 16px;}
+        #bit-booster-tbl span.icon { font-family: "Atlassian Icons"; font-size: 16px; padding-left: 2px; }
+        #bit-booster-tbl td.d { font-style: italic; color: darkgray; padding-left: 0.7em; white-space: nowrap; }
+        #bit-booster-tbl td.commit { padding: 4px 1px; }
+</style>
+<!-- http://bit-booster.com/graph.html  DATA WAS:
+e5096d1|1631cf7|Adds-twitter-support-to-fixsocials
+1631cf7|0bc5d0e|Make-all-cog-commands-into-a-group-and-fixed-sendasme
+0bc5d0e|394c323 2c61cb6|Merge-pull-request-5-from-Pearl-Codes-deepsource-fix-d624213e
+2c61cb6|394c323|Remove-duplicate-dictionary-key-s
+394c323|1648afe 1707592|Merge-pull-request-4-from-Pearl-Codes-deepsource-fix-e9836643
+1707592|1648afe|Fix-dangerous-default-argument
+1648afe|0c44e62 a16edfd|Merge-pull-request-3-from-Pearl-Codes-deepsource-fix-5c21f8a7
+a16edfd|0c44e62|Use-identity-check-for-comparison-to-a-singleton
+0c44e62|cdf2430 1d0412d|Merge-pull-request-2-from-Pearl-Codes-deepsource-fix-38b1145f
+1d0412d|cdf2430|Remove-assert-statement-from-non-test-files
+cdf2430|5663f1e 0873c60|Merge-pull-request-1-from-Pearl-Codes-deepsource-fix-d14580d7
+0873c60|5663f1e|Use-sys.exit-calls
+5663f1e|0e55bea|Add-.deepsource.toml
+0e55bea|043fc29|load-command
+043fc29|75169f0|Sleepyboi-suggested-it-has-a-1-in-10000-chance-to-insult-you-when-sending-songs-so-I-added-it-lmao
+75169f0|45dc970|Finally-change-the-DM-to-show-mute-reasons
+45dc970|59f1c29|TRUST-ME-I-DID-CHANGE-THAT-CODE-SLEEPYBOI
+59f1c29|033b9bb|Role-naming-changes
+033b9bb|71ef4c1|theres-too-many-changes-i-cba-explaining-them-all
+71ef4c1|049b117|remove-docker-stuff
+049b117|7b304cc|change-pronouns-in-sabbath.py-probably-won-t-use-this-extention-but-if-i-need-it-i-ll-enable-it
+7b304cc|a401dc1|Change-description-of-stats
+a401dc1|060c89d|Disable-a-bunch-of-r-jailbreak-specific-extentions
+060c89d|6e9361e|according-to-pycharm-these-arnt-versioned-so-fuck-it
+6e9361e|04c6b63|pretty-new-readme
+04c6b63|81e727d|GPLv3-is-based
+81e727d|ac8b767|Delete-LICENSE.md
+ac8b767|2a728be db5e027|Merge-pull-request-18-from-BomberFish-patch-2
+2a728be|019f421 0e0519a|Merge-pull-request-17-from-BomberFish-patch-1
+019f421|c8546ab bbbd983|Merge-pull-request-14-from-0xallie-fix-thread-terminology
+a50658f|e6a4552 9632108|Merge-branch-main-of-https-github.com-junepark678-GIRRewrite
+e6a4552|d358c7e|STOP-THIS-MADNESS-disable-reaction-logging
+9632108|d358c7e|profanity.py-UNUSED-notice
+d358c7e|7521236|shit
+7521236|9f384ab 96970d7|Merge-branch-main-of-https-github.com-junepark678-GIRRewrite
+9f384ab|65c50ae|ffs
+96970d7|65c50ae|fix-filter-from-not-working
+65c50ae|7a599b7|Yeah-Filter-was-a-hole
+7a599b7|7aa0178|Yeah-Filter-was-a-hole
+7aa0178|3d24bfc|Yeah-Filter-was-a-hole
+3d24bfc|bbe2ede|Yeah-Filter-was-a-hole
+bbe2ede|722f7e7 44de500|Merge-branch-main-of-https-github.com-junepark678-GIRRewrite
+722f7e7|92dc0b2|bruh
+44de500|92dc0b2|fix-filter
+92dc0b2|b12710d 7a3a4d4|nothing
+b12710d|f81cdae|Added-profanity-filter.-Rerun-pip
+f81cdae|b8e871d|add-a-cog
+b8e871d|b59b71f|reset-things
+7a3a4d4|6df4e8e|ffs
+6df4e8e|ebbd47e|broke-the-broke-again
+ebbd47e|829c42b|managed-to-break-horrible-code-to-make-more-horrible-code-to-break
+829c42b|a67c82b|don-t-look-at-this-code-please
+a67c82b|e225681|based
+e225681|e8b1942|old-commit-but-i-didn-t-save
+e8b1942|9506784|remove-the-stupid-autoname-for-role-buttons
+9506784|ca4ccf3|oh-god
+ca4ccf3|4c4f20d|re
+4c4f20d|b59b71f|done
+b59b71f|e703da3|Our-server-setup-in-setup.py-makes-getting-the-development-enviroment-setup-wayy-easier
+e703da3|c8546ab|changes
+db5e027|c8546ab|Fix-2-more-typos
+0e0519a|c8546ab|Fix-typo-in-xp-description
+c8546ab|9869154 ec4512d|Fix-tiktok-embeds
+ec4512d|2efb049|REmove-unnecessary-prints
+2efb049|c2e240c|hot-fix
+c2e240c|9869154|Possibly-fix-tiktok-embeds
+bbbd983|9869154|fix-thread-terminology
+9869154|4214834|Close-new-thread-in-forum-channel-if-user-already-has-one-open
+4214834|3c139b3|Added-fix-instagram
+3c139b3|6add7f9|Hotfix
+6add7f9|5661f6f|Post-embeds-for-tiktoks-similar-to-fxtwitter
+5661f6f|a343aea|Add-defers-to-solve-timeout-issue-thanks-Discord
+a343aea|0e70c23|Possibly-fix-device-add
+0e70c23|0bdab27|Added-ability-to-ignore-channels-in-logging
+0bdab27|897c93d|make-discord-invites-not-an-automatic-raid-phrase
+897c93d|2815f1d|hotfix
+2815f1d|d1c9b64 7ab4fcd|Merge-pull-request-13-from-emiyl-patch-3
+d1c9b64|d6efb51|Added-member-ultra
+7ab4fcd|d6efb51|omit-identifiers-on-devices-without-identifiers
+d6efb51|3a5ff12|Hotfix-for-brand-names-of-devices
+3a5ff12|6083327|lol
+6083327|82d8e0b 98d6fee|Merge-pull-request-12-from-itsnebulalol-patch-1
+82d8e0b|953bca5 017f8d6|Merge-pull-request-11-from-emiyl-patch-2
+98d6fee|953bca5|Fix-emojis-in-dstatus-command
+017f8d6|953bca5|identifiers-are-now-arrays
+953bca5|833fa34 6d5f819|Merge-pull-request-10-from-emiyl-patch-1
+6d5f819|833fa34|use-new-webp-images
+833fa34|59c7506 cef2c4f|Merge-pull-request-9-from-TheRealKeto-qol-song-update
+59c7506|bc6f1f7|Make-xp-whisper
+cef2c4f|bc6f1f7|songs.py-Allow-links-with-to-be-matched
+bc6f1f7|bb7b9d3|Fix-issue-with-signing-status-for-firmware
+bb7b9d3|482bfe6|Post-your-own-xp-without-a-whisper
+482bfe6|96cb313|More-fixes-to-AppleDB
+96cb313|3a16409|Several-more-fixes-for-AppleDB
+3a16409|7d7275f|This-does-not-need-to-be-a-whisper
+7d7275f|dcbdcd4|We-don-t-need-this-command-anymore-device-list
+dcbdcd4|9e3fa66|Fix-solved-issue-when-thread-owner-leaves-server
+9e3fa66|b7259ea|Various-fixes-to-AppleDB
+b7259ea|0038d70|Minor-fixes
+0038d70|4ed3085|Some-fixes-for-cfw.guide-improved-sorting-for-devices
+4ed3085|f4992db|Make-jailbreak-only-work-in-jb-and-genius-bar
+f4992db|b89e365|Fix-issue-with-transferprofile
+b89e365|59f7fa7|Extra-check-for-snipe
+59f7fa7|d029cec|Added-snipe-command
+d029cec|390f45c|Fix-VC-logging-bug
+390f45c|d052445|Update-cfw.guide-description
+d052445|bb4d8b6|Fix-a-bug-with-avatar
+bb4d8b6|47f386c|Permissions-fix-for-solved
+47f386c|ef74ae5|Migrate-sharerepo-to-repomcrepoface
+ef74ae5|21e3a5e|Hotfix-more-error-handling
+21e3a5e|8c35676|Improved-casestats-with-searching-by-reason
+8c35676|4f7d94f|Give-poll-and-say-images
+4f7d94f|0dde616|Fix-a-filter-bug
+0dde616|9ef9aba|Fix-a-bug-with-warn-case-logging
+9ef9aba|a903b39|Remind-user-to-close-thread-when-they-open-one
+a903b39|a9f67c0|allow-OP-to-delete-their-own-thread
+a9f67c0|f9b177d|Extra-permission-check
+f9b177d|1624c2a|Add-solved-command-for-forum-threads
+1624c2a|458ab12|Voice-chat-logging
+458ab12|fdb7440|Allow-editreason-on-external-users
+fdb7440|3517f3f|Update-links-for-cfw.guide
+3517f3f|2ae26a7|Fix-command-handler-update-discord.py.-Handle-timeouts-better
+2ae26a7|2ce9ccd|Fix-an-issue-with-context-commands
+2ce9ccd|8937118|Fix-for-buttons-set
+8937118|ca07c79|Fixed-some-weird-button-behavior-for-canijailbreak
+ca07c79|43f7fde|Hotfix-for-timezone-list
+43f7fde|dd445bc|Delete-unused-script
+dd445bc|8ed52ba|Another-cfw.guide-fix
+8ed52ba|0d2ea7b|Fixes-to-command-logging-add-what-channel-it-was-used-in
+0d2ea7b|5b10d01|timezone-list-hint-for-timezone-set-to-pick-a-country
+5b10d01|158733c|Added-timezone-commands-to-set-and-view-local-time-for-users
+158733c|625ca0e|Update-readme
+625ca0e|ca97be2|Another-fix-to-cij-yay
+ca97be2|db0358e|Make-staffban-mods-and-up-update-message
+db0358e|6835c5f|Fix-deviceinfo
+6835c5f|7cdfc5a|staffban
+7cdfc5a|e51ce96|Fix-a-missing-emote
+e51ce96|50dac01|Fix-for-giveaway-end
+50dac01|2f43d55|Fix-userinfo-banner
+2f43d55|798bf3e 03852f1|Merge-branch-feature-sync-command-into-main
+798bf3e|03a1304|Another-fix
+03a1304|291a62b|More-cij-fixes
+291a62b|852094f|cij-fixes
+852094f|dee3827|Fixes
+dee3827|b97696b f5d7906|Merge-pull-request-4-from-captinc-main
+f5d7906|b97696b|Update-banner-picture
+03852f1|9665fdf|Extra-check
+9665fdf|b97696b|Test-sync-command
+b97696b|8d57561 3a56471|Merge-pull-request-3-from-stekc-fix-buttoncord-migration
+3a56471|8d57561|Migrate-emojis-used-throughout-the-bot-to-buttoncord
+8d57561|9a501e7|Remove-labels-on-song-buttons
+9a501e7|8529c8c|Update-readme
+8529c8c|9511419 ff6e8a8|Push-all-code-welcome-to-the-rewrite
+ff6e8a8|0bd2188|Rename-all-references-to-Bloo
+0bd2188|2c047a9|Change-some-emotes
+2c047a9|79e129f|Fix-for-logging-command-usage
+79e129f|5c56f13|Sync-commands-in-dockerfile-for-prod
+5c56f13|eb484dc|Push-some-files-needed-for-deployment
+eb484dc|9d2b88a|Use-buttoncord-emotes-for-songs
+9d2b88a|11aaab0|Fix-command-ban-filtering
+11aaab0|a51cdd1|Add-filtering-to-commands-some-cleanup-a-transformer-fix
+a51cdd1|273842b|Revert-to-old-logging
+273842b|86c9b30|New-help-command
+86c9b30|5b82b02 ed6808d|Merge-pull-request-2-from-DiscordGIR-feat-dropdown-repo-icons
+ed6808d|2be25fc|Fix-repo-button-icon
+5b82b02|e2273df|Many-small-fixes-add-buttons-back-to-repo
+e2273df|1b26145|Some-fixes-add-tag-prefixed-command
+2be25fc|b86f578 1b26145|Merge-branch-development-into-feat-dropdown-repo-icons
+1b26145|1ef0f30|Minor-fixes
+b86f578|1ef0f30|Add-repo-icons-to-Canister-dropdown
+1ef0f30|3fea51f|Add-back-a-missing-button
+3fea51f|6f657d6|Mooooore-fixes
+6f657d6|077714c|More-minor-fixes
+077714c|56802ed|A-fixie
+56802ed|a77a3f6|Many-small-fixes
+a77a3f6|0798790|More-migrations-last-context-commands
+0798790|2679407|Migrations-more-context-commands
+2679407|fecc0dd|Structure-for-context-commands
+fecc0dd|61a3be4|Cleanup
+61a3be4|395f6cd|Fixies
+395f6cd|992bdae|Image-transformer
+992bdae|977e55e|Modutils
+977e55e|af3e097|Finish-modactions
+af3e097|1dc1fb4|More-commands-transformers
+1dc1fb4|d637f24|Added-mute-potentially-improve-respond_or_edit
+d637f24|2ed3d5a|More-transformer
+2ed3d5a|97c0abc|Started-work-on-modactions-a-hotfix
+97c0abc|609237c|Filter-cog
+609237c|4f9ada0|Antiraid-cogs
+4f9ada0|93d4291|Unban-appeals-monitor
+93d4291|1738af7|Added-booster-emojis-jailbreak-monitors-role-buttons
+1738af7|ca44a69|Add-booster-emojis-back
+ca44a69|19d4a9a|Add-blootooth-back
+19d4a9a|595c55c|Fix-mute-button
+595c55c|db9cef4|Fix-ban-cache
+db9cef4|af2d549|Started-reimplementing-antiraid
+af2d549|a938003|Slight-Cleanup
+a938003|b1de039|Scam-jb-filter
+b1de039|e0bbe33|Finished-report
+e0bbe33|c309af6|More-improvements
+c309af6|79c9bd1|ban-in-report
+79c9bd1|4fe5155|Started-work-on-filter-reports-etc.-holy-shit
+4fe5155|4783bed|Slight-refactor
+4783bed|1e442de|Sabbath
+1e442de|c7993a3|Refactor-birthday-and-songs-cogs
+c7993a3|6f5bd06|Meme-cog
+6f5bd06|40e3032|Some-formatting-for-canister
+40e3032|9d3ae36|Canister-complete
+9d3ae36|471846c|Improved-canister-implementation
+471846c|57ae7a5|More
+57ae7a5|eddee95|Canister-jump-button
+eddee95|eace5a5|I-am-not-proud-of-this-but-fix-Canister
+eace5a5|6f65f80|Incomplete-canister-code-probably-needs-to-be-rewritte
+6f65f80|6a9f445|Giveaway-cog
+6a9f445|9bc6aae|add-bypass
+9bc6aae|a512907|fix-menus-AGAIN
+a512907|51b5f26|Almost-completed-cfw.guide-cog
+51b5f26|88bd6ab|Fucking-fix-menus
+88bd6ab|325cb95|Fixes
+325cb95|3c8a6be|Refactor-fetchers-into-their-own-file
+3c8a6be|7bf52a4|most-of-the-misc-cog
+7bf52a4|bba0e45|Finish-up-genius-cog
+bba0e45|410ba1d|CommonIssue-new-edit-fixes-postembed
+410ba1d|a965955|common-issue-edit
+a965955|9e38aa2|Updated-dev-dockerfile
+9e38aa2|230ed6d 7723695|merge
+7723695|f47b0ac|commonissue-new
+f47b0ac|43497fa|Started-genius-admin
+43497fa|3beed04|Use-autocomplete-values-custom-transformers-for-Devices-cog
+3beed04|93420c1|Other-2-device-commands
+93420c1|e208010|Started-work-on-porting-Devices
+e208010|b1b2d8e|Improved-example
+230ed6d|2a8d4d0|feat-port-xp-monitor
+2a8d4d0|937de32|feat-port-logging-monitor
+937de32|46e7cd4|feat-add-bans-to-serverinfo
+46e7cd4|b1b2d8e|feat-add-radium
+b1b2d8e|e26a0e6|Better-error-formatting
+e26a0e6|1812a7b|Slight-refactor-improvements-to-context-implemented-tags-cog
+1812a7b|ca7018f|Reimplemented-menus
+ca7018f|05b6728|Implement-many-userinfo-commands
+05b6728|a2f55de|Incomplete-implementation-of-help
+a2f55de|9729f71|Reimplement-permission-checks-as-app-command-checks
+9729f71|fd48460|Implement-permissions-check-decorators-improve-error-handler
+fd48460|8210499|incomplete-error-handler-implement-some-more-commands
+8210499|93bb223|Fix-syncing-script
+93bb223|3980497|Reimplement-permissions-extend-BlooContext-fix-whisper
+3980497|b408937|Sorta-fix-whisper
+b408937|8c229f9|Bump-and-migrations-to-discord.py-fix-transform_context
+8c229f9|d0bc434|Started-work-on-custom-context
+d0bc434|86ae107|Centralized-list-of-cogs-to-load
+86ae107|5c0e778|Improved-imports
+5c0e778|fdbe78b|Some-light-refactoring
+fdbe78b|9511419|Added-back-database
+9511419|6b8deae|Push-initial-files-welcome-to-the-port-from-Pycord
+6b8deae||Initial-commit
+
+-->
+<table id="bit-booster-tbl" style="width: 1%;">
+    <tbody>
+        <tr>
+            <td style="vertical-align: top;" rowspan="99999">
+                <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="114" height="6117.000030517578" text-rendering="optimizeLegibility" style="border: 0px; margin: 0px; padding: 0;" id="bit-booster">
+                    <path d="M9,59C8,85.25,25,67.75,24,83" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,83C25,109.25,8,91.75,9,107" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,107C8,133.25,25,115.75,24,131" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,131C25,157.25,8,139.75,9,155" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,155C8,181.25,25,163.75,24,179" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,179C25,205.25,8,187.75,9,203" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,203C8,229.25,25,211.75,24,227" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,227C25,253.25,8,235.75,9,251" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,251C8,277.25,25,259.75,24,275" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,275C25,301.25,8,283.75,9,299" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,659.0000305175781C8,685.2500305175781,55,667.7500305175781,54,683.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#fae03c"></path>
+                    <path d="M9,683.0000305175781C8,709.2500305175781,40,691.7500305175781,39,707.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M99,1571.0000305175781C100,1597.2500305175781,23,1579.7500305175781,24,1595.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#dc4132"></path>
+                    <path d="M9,707.0000305175781C8,733.2500305175781,100,715.7500305175781,99,731.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#dc4132"></path>
+                    <path d="M69,731.0000305175781C68,757.2500305175781,85,739.7500305175781,84,755.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M84,779.0000305175781C85,805.2500305175781,68,787.7500305175781,69,803.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M69,827.0000305175781C68,853.2500305175781,85,835.7500305175781,84,851.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M84,875.0000305175781C85,901.2500305175781,68,883.7500305175781,69,899.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M69,995.0000305175781C68,1021.2500305175781,85,1003.7500305175781,84,1019.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M84,1043.0000305175781C85,1069.2500305175781,68,1051.7500305175781,69,1067.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M69,1067.0000305175781C68,1093.2500305175781,85,1075.7500305175781,84,1091.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M84,1379.0000305175781C85,1405.2500305175781,68,1387.7500305175781,69,1403.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#9896a4"></path>
+                    <path d="M69,1475.0000305175781C70,1501.2500305175781,8,1483.7500305175781,9,1499.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#98ddde"></path>
+                    <path d="M54,1475.0000305175781C55,1501.2500305175781,8,1483.7500305175781,9,1499.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#fae03c"></path>
+                    <path d="M39,1475.0000305175781C40,1501.2500305175781,8,1483.7500305175781,9,1499.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M9,1499.0000305175781C8,1525.2500305175781,25,1507.7500305175781,24,1523.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,1547.0000305175781C23,1573.2500305175781,40,1555.7500305175781,39,1571.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M39,1595.0000305175781C40,1621.2500305175781,8,1603.7500305175781,9,1619.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M24,1595.0000305175781C25,1621.2500305175781,8,1603.7500305175781,9,1619.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,1835.0000305175781C8,1861.2500305175781,25,1843.7500305175781,24,1859.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,1883.0000305175781C25,1909.2500305175781,8,1891.7500305175781,9,1907.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,1955.0000305175781C8,1981.2500305175781,40,1963.7500305175781,39,1979.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M9,1979.0000305175781C8,2005.2500305175781,25,1987.7500305175781,24,2003.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M39,2027.0000305175781C40,2053.250030517578,8,2035.7500305175781,9,2051.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M24,2027.0000305175781C25,2053.250030517578,8,2035.7500305175781,9,2051.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,2051.000030517578C8,2077.250030517578,25,2059.750030517578,24,2075.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,2075.000030517578C25,2101.250030517578,8,2083.750030517578,9,2099.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,2099.000030517578C8,2125.250030517578,25,2107.750030517578,24,2123.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,2147.000030517578C25,2173.250030517578,8,2155.750030517578,9,2171.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,3347.000030517578C8,3373.250030517578,25,3355.750030517578,24,3371.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,3467.000030517578C8,3493.250030517578,40,3475.750030517578,39,3491.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M39,3539.000030517578C40,3565.250030517578,8,3547.750030517578,9,3563.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M24,3539.000030517578C25,3565.250030517578,8,3547.750030517578,9,3563.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,3563.000030517578C8,3589.250030517578,25,3571.750030517578,24,3587.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,3587.000030517578C25,3613.250030517578,8,3595.750030517578,9,3611.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,3659.000030517578C8,3685.250030517578,25,3667.750030517578,24,3683.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M24,3923.000030517578C23,3949.250030517578,40,3931.750030517578,39,3947.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M39,4019.000030517578C40,4045.250030517578,23,4027.750030517578,24,4043.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M39,4067.000030517578C40,4093.250030517578,23,4075.750030517578,24,4091.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M24,5411.000030517578C23,5437.250030517578,40,5419.750030517578,39,5435.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M39,5651.000030517578C40,5677.250030517578,23,5659.750030517578,24,5675.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#f7786b"></path>
+                    <path d="M24,6059.000030517578C25,6085.250030517578,8,6067.750030517578,9,6083.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" fill="none" stroke="#79c753"></path>
+                    <path d="M9,6083.000030517578L9,6107.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,6059.000030517578L24,6059.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,6035.000030517578L24,6059.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,6011.000030517578L24,6035.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5987.000030517578L24,6011.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5963.000030517578L24,5987.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5939.000030517578L24,5963.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5915.000030517578L24,5939.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5891.000030517578L24,5915.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5867.000030517578L24,5891.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5843.000030517578L24,5867.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5819.000030517578L24,5843.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5795.000030517578L24,5819.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5771.000030517578L24,5795.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5747.000030517578L24,5771.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5723.000030517578L24,5747.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5699.000030517578L24,5723.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5675.000030517578L24,5699.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5651.000030517578L24,5675.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5627.000030517578L24,5651.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5603.000030517578L24,5627.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5579.000030517578L24,5603.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,5555.000030517578L39,5651.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M39,5531.000030517578L39,5555.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M39,5507.000030517578L39,5531.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M39,5483.000030517578L39,5507.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M39,5459.000030517578L39,5483.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M39,5435.000030517578L39,5459.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M24,5411.000030517578L24,5579.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,5435.000030517578L39,5435.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M24,5387.000030517578L24,5411.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5363.000030517578L24,5387.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5339.000030517578L24,5363.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5315.000030517578L24,5339.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5291.000030517578L24,5315.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5267.000030517578L24,5291.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5243.000030517578L24,5267.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5219.000030517578L24,5243.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5195.000030517578L24,5219.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5171.000030517578L24,5195.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5147.000030517578L24,5171.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5123.000030517578L24,5147.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5099.000030517578L24,5123.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5075.000030517578L24,5099.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5051.000030517578L24,5075.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5027.000030517578L24,5051.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,5003.000030517578L24,5027.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4979.000030517578L24,5003.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4955.000030517578L24,4979.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4931.000030517578L24,4955.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4907.000030517578L24,4931.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4883.000030517578L24,4907.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4859.000030517578L24,4883.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4835.000030517578L24,4859.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4811.000030517578L24,4835.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4787.000030517578L24,4811.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4763.000030517578L24,4787.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4739.000030517578L24,4763.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4715.000030517578L24,4739.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4691.000030517578L24,4715.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4667.000030517578L24,4691.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4643.000030517578L24,4667.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4619.000030517578L24,4643.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4595.000030517578L24,4619.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4571.000030517578L24,4595.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4547.000030517578L24,4571.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4523.000030517578L24,4547.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4499.000030517578L24,4523.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4475.000030517578L24,4499.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4451.000030517578L24,4475.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4427.000030517578L24,4451.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4403.000030517578L24,4427.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4379.000030517578L24,4403.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4355.000030517578L24,4379.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4331.000030517578L24,4355.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4307.000030517578L24,4331.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4283.000030517578L24,4307.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4259.000030517578L24,4283.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4235.000030517578L24,4259.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4211.000030517578L24,4235.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4187.000030517578L24,4211.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4163.000030517578L24,4187.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4139.000030517578L24,4163.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4115.000030517578L24,4139.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,4091.000030517578L24,4115.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,4067.000030517578L39,4067.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M24,4043.000030517578L24,4091.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,4019.000030517578L39,4067.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M39,4019.000030517578L39,4019.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M24,3995.000030517578L24,4043.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3971.000030517578L24,3995.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,3947.000030517578L39,4019.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M24,3923.000030517578L24,3971.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,3947.000030517578L39,3947.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M24,3899.000030517578L24,3923.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3875.000030517578L24,3899.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3851.000030517578L24,3875.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3827.000030517578L24,3851.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3803.000030517578L24,3827.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3779.000030517578L24,3803.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3755.000030517578L24,3779.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3731.000030517578L24,3755.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3707.000030517578L24,3731.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3683.000030517578L24,3707.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,3659.000030517578L9,6083.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,3683.000030517578L24,3683.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,3635.000030517578L9,3659.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3611.000030517578L9,3635.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,3587.000030517578L24,3587.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,3563.000030517578L9,3611.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,3587.000030517578L24,3587.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3539.000030517578L24,3539.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,3515.000030517578L24,3539.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,3491.000030517578L39,3539.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M9,3467.000030517578L9,3563.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M39,3491.000030517578L39,3491.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M9,3443.000030517578L9,3467.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3419.000030517578L9,3443.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3395.000030517578L9,3419.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3371.000030517578L9,3395.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3347.000030517578L9,3371.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,3371.000030517578L24,3515.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,3323.000030517578L9,3347.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3299.000030517578L9,3323.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3275.000030517578L9,3299.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3251.000030517578L9,3275.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3227.000030517578L9,3251.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3203.000030517578L9,3227.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3179.000030517578L9,3203.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3155.000030517578L9,3179.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3131.000030517578L9,3155.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3107.000030517578L9,3131.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3083.000030517578L9,3107.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3059.000030517578L9,3083.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3035.000030517578L9,3059.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,3011.000030517578L9,3035.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2987.000030517578L9,3011.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2963.000030517578L9,2987.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2939.000030517578L9,2963.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2915.000030517578L9,2939.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2891.000030517578L9,2915.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2867.000030517578L9,2891.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2843.000030517578L9,2867.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2819.000030517578L9,2843.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2795.000030517578L9,2819.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2771.000030517578L9,2795.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2747.000030517578L9,2771.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2723.000030517578L9,2747.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2699.000030517578L9,2723.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2675.000030517578L9,2699.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2651.000030517578L9,2675.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2627.000030517578L9,2651.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2603.000030517578L9,2627.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2579.000030517578L9,2603.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2555.000030517578L9,2579.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2531.000030517578L9,2555.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2507.000030517578L9,2531.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2483.000030517578L9,2507.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2459.000030517578L9,2483.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2435.000030517578L9,2459.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2411.000030517578L9,2435.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2387.000030517578L9,2411.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2363.000030517578L9,2387.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2339.000030517578L9,2363.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2315.000030517578L9,2339.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2291.000030517578L9,2315.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2267.000030517578L9,2291.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2243.000030517578L9,2267.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2219.000030517578L9,2243.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2195.000030517578L9,2219.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2171.000030517578L9,2195.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,2147.000030517578L24,2147.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,2123.000030517578L9,2171.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,2099.000030517578L9,2123.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,2123.000030517578L24,2147.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,2075.000030517578L24,2075.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,2051.000030517578L9,2099.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,2075.000030517578L24,2075.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,2027.0000305175781L24,2027.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,2003.0000305175781L39,2027.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M9,1979.0000305175781L9,2051.000030517578" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,2003.0000305175781L24,2027.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,1955.0000305175781L9,1979.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M39,1979.0000305175781L39,2003.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M9,1931.0000305175781L9,1955.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1907.0000305175781L9,1931.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,1883.0000305175781L24,1883.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,1859.0000305175781L9,1907.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1835.0000305175781L9,1859.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,1859.0000305175781L24,1883.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,1811.0000305175781L9,1835.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1787.0000305175781L9,1811.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1763.0000305175781L9,1787.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1739.0000305175781L9,1763.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1715.0000305175781L9,1739.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1691.0000305175781L9,1715.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1667.0000305175781L9,1691.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1643.0000305175781L9,1667.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,1619.0000305175781L9,1643.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,1595.0000305175781L24,1595.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,1571.0000305175781L39,1595.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M39,1571.0000305175781L39,1571.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M24,1523.0000305175781L24,1547.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,1499.0000305175781L9,1619.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,1523.0000305175781L24,1523.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M39,1475.0000305175781L39,1475.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M54,1451.0000305175781L54,1475.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#fae03c"></path>
+                    <path d="M69,1427.0000305175781L69,1475.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,1403.0000305175781L69,1427.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M84,1379.0000305175781L84,1379.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1355.0000305175781L84,1379.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1331.0000305175781L84,1355.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1307.0000305175781L84,1331.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1283.0000305175781L84,1307.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1259.0000305175781L84,1283.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1235.0000305175781L84,1259.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1211.0000305175781L84,1235.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1187.0000305175781L84,1211.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1163.0000305175781L84,1187.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M69,1139.0000305175781L69,1403.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,1115.0000305175781L69,1139.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,1091.0000305175781L69,1115.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,1067.0000305175781L69,1091.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M84,1091.0000305175781L84,1163.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M84,1043.0000305175781L84,1043.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M69,1019.0000305175781L69,1067.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,995.0000305175781L69,1019.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M84,1019.0000305175781L84,1043.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M69,971.0000305175781L69,995.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,947.0000305175781L69,971.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,923.0000305175781L69,947.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,899.0000305175781L69,923.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M84,875.0000305175781L84,875.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M69,851.0000305175781L69,899.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,827.0000305175781L69,851.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M84,851.0000305175781L84,875.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M69,803.0000305175781L69,827.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M84,779.0000305175781L84,779.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M69,755.0000305175781L69,803.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M69,731.0000305175781L69,755.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#98ddde"></path>
+                    <path d="M84,755.0000305175781L84,779.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#9896a4"></path>
+                    <path d="M9,707.0000305175781L9,1499.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M99,731.0000305175781L99,1571.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#dc4132"></path>
+                    <path d="M9,683.0000305175781L9,707.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M39,707.0000305175781L39,1475.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#f7786b"></path>
+                    <path d="M9,659.0000305175781L9,683.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M54,683.0000305175781L54,1451.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#fae03c"></path>
+                    <path d="M9,635.0000305175781L9,659.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,611.0000305175781L9,635.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,587.0000305175781L9,611.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,563.0000305175781L9,587.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,539.0000305175781L9,563.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,515.0000305175781L9,539.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,491.0000305175781L9,515.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,467.0000305175781L9,491.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,443.0000305175781L9,467.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,419.0000305175781L9,443.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,395.0000305175781L9,419.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,371.0000305175781L9,395.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,347L9,371.0000305175781" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,323L9,347" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,299L9,323" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,275L24,275" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,251L9,299" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,275L24,275" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,227L24,227" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,203L9,251" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,227L24,227" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,179L24,179" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,155L9,203" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,179L24,179" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,131L24,131" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,107L9,155" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,131L24,131" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M24,83L24,83" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,59L9,107" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M24,83L24,83" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#79c753"></path>
+                    <path d="M9,35L9,59" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <path d="M9,11L9,35" stroke-width="2" stroke-opacity="1" opacity="1" stroke="#034f84"></path>
+                    <circle id="C_6b8deae" cx="9" cy="6107.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_9511419" cx="9" cy="6083.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_fdbe78b" cx="24" cy="6059.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_5c0e778" cx="24" cy="6035.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_86ae107" cx="24" cy="6011.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_d0bc434" cx="24" cy="5987.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_8c229f9" cx="24" cy="5963.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_b408937" cx="24" cy="5939.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_3980497" cx="24" cy="5915.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_93bb223" cx="24" cy="5891.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_8210499" cx="24" cy="5867.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_fd48460" cx="24" cy="5843.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_9729f71" cx="24" cy="5819.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_a2f55de" cx="24" cy="5795.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_05b6728" cx="24" cy="5771.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_ca7018f" cx="24" cy="5747.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_1812a7b" cx="24" cy="5723.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_e26a0e6" cx="24" cy="5699.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_b1b2d8e" cx="24" cy="5675.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_46e7cd4" cx="24" cy="5651.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_937de32" cx="24" cy="5627.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_2a8d4d0" cx="24" cy="5603.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_230ed6d" cx="24" cy="5579.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_e208010" cx="39" cy="5555.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_93420c1" cx="39" cy="5531.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_3beed04" cx="39" cy="5507.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_43497fa" cx="39" cy="5483.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_f47b0ac" cx="39" cy="5459.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_7723695" cx="39" cy="5435.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_9e38aa2" cx="24" cy="5411.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_a965955" cx="24" cy="5387.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_410ba1d" cx="24" cy="5363.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_bba0e45" cx="24" cy="5339.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_7bf52a4" cx="24" cy="5315.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_3c8a6be" cx="24" cy="5291.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_325cb95" cx="24" cy="5267.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_88bd6ab" cx="24" cy="5243.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_51b5f26" cx="24" cy="5219.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_a512907" cx="24" cy="5195.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_9bc6aae" cx="24" cy="5171.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_6a9f445" cx="24" cy="5147.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_6f65f80" cx="24" cy="5123.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_eace5a5" cx="24" cy="5099.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_eddee95" cx="24" cy="5075.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_57ae7a5" cx="24" cy="5051.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_471846c" cx="24" cy="5027.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_9d3ae36" cx="24" cy="5003.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_40e3032" cx="24" cy="4979.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_6f5bd06" cx="24" cy="4955.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_c7993a3" cx="24" cy="4931.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_1e442de" cx="24" cy="4907.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_4783bed" cx="24" cy="4883.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_4fe5155" cx="24" cy="4859.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_79c9bd1" cx="24" cy="4835.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_c309af6" cx="24" cy="4811.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_e0bbe33" cx="24" cy="4787.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_b1de039" cx="24" cy="4763.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_a938003" cx="24" cy="4739.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_af2d549" cx="24" cy="4715.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_db9cef4" cx="24" cy="4691.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_595c55c" cx="24" cy="4667.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_19d4a9a" cx="24" cy="4643.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_ca44a69" cx="24" cy="4619.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_1738af7" cx="24" cy="4595.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_93d4291" cx="24" cy="4571.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_4f9ada0" cx="24" cy="4547.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_609237c" cx="24" cy="4523.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_97c0abc" cx="24" cy="4499.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_2ed3d5a" cx="24" cy="4475.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_d637f24" cx="24" cy="4451.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_1dc1fb4" cx="24" cy="4427.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_af3e097" cx="24" cy="4403.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_977e55e" cx="24" cy="4379.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_992bdae" cx="24" cy="4355.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_395f6cd" cx="24" cy="4331.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_61a3be4" cx="24" cy="4307.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_fecc0dd" cx="24" cy="4283.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_2679407" cx="24" cy="4259.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_0798790" cx="24" cy="4235.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_a77a3f6" cx="24" cy="4211.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_56802ed" cx="24" cy="4187.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_077714c" cx="24" cy="4163.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_6f657d6" cx="24" cy="4139.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_3fea51f" cx="24" cy="4115.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_1ef0f30" cx="24" cy="4091.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_b86f578" cx="39" cy="4067.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_1b26145" cx="24" cy="4043.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_2be25fc" cx="39" cy="4019.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_e2273df" cx="24" cy="3995.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_5b82b02" cx="24" cy="3971.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_ed6808d" cx="39" cy="3947.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_86c9b30" cx="24" cy="3923.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_273842b" cx="24" cy="3899.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_a51cdd1" cx="24" cy="3875.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_11aaab0" cx="24" cy="3851.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_9d2b88a" cx="24" cy="3827.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_eb484dc" cx="24" cy="3803.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_5c56f13" cx="24" cy="3779.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_79e129f" cx="24" cy="3755.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_2c047a9" cx="24" cy="3731.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_0bd2188" cx="24" cy="3707.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_ff6e8a8" cx="24" cy="3683.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_8529c8c" cx="9" cy="3659.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_9a501e7" cx="9" cy="3635.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_8d57561" cx="9" cy="3611.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_3a56471" cx="24" cy="3587.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_b97696b" cx="9" cy="3563.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_9665fdf" cx="24" cy="3539.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_03852f1" cx="24" cy="3515.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_f5d7906" cx="39" cy="3491.000030517578" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_dee3827" cx="9" cy="3467.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_852094f" cx="9" cy="3443.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_291a62b" cx="9" cy="3419.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_03a1304" cx="9" cy="3395.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_798bf3e" cx="9" cy="3371.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_2f43d55" cx="9" cy="3347.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_50dac01" cx="9" cy="3323.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_e51ce96" cx="9" cy="3299.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_7cdfc5a" cx="9" cy="3275.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_6835c5f" cx="9" cy="3251.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_db0358e" cx="9" cy="3227.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_ca97be2" cx="9" cy="3203.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_625ca0e" cx="9" cy="3179.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_158733c" cx="9" cy="3155.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_5b10d01" cx="9" cy="3131.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0d2ea7b" cx="9" cy="3107.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_8ed52ba" cx="9" cy="3083.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_dd445bc" cx="9" cy="3059.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_43f7fde" cx="9" cy="3035.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_ca07c79" cx="9" cy="3011.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_8937118" cx="9" cy="2987.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_2ce9ccd" cx="9" cy="2963.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_2ae26a7" cx="9" cy="2939.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_3517f3f" cx="9" cy="2915.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_fdb7440" cx="9" cy="2891.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_458ab12" cx="9" cy="2867.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_1624c2a" cx="9" cy="2843.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_f9b177d" cx="9" cy="2819.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_a9f67c0" cx="9" cy="2795.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_a903b39" cx="9" cy="2771.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_9ef9aba" cx="9" cy="2747.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0dde616" cx="9" cy="2723.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_4f7d94f" cx="9" cy="2699.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_8c35676" cx="9" cy="2675.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_21e3a5e" cx="9" cy="2651.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_ef74ae5" cx="9" cy="2627.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_47f386c" cx="9" cy="2603.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_bb4d8b6" cx="9" cy="2579.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_d052445" cx="9" cy="2555.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_390f45c" cx="9" cy="2531.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_d029cec" cx="9" cy="2507.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_59f7fa7" cx="9" cy="2483.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_b89e365" cx="9" cy="2459.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_f4992db" cx="9" cy="2435.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_4ed3085" cx="9" cy="2411.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0038d70" cx="9" cy="2387.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_b7259ea" cx="9" cy="2363.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_9e3fa66" cx="9" cy="2339.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_dcbdcd4" cx="9" cy="2315.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_7d7275f" cx="9" cy="2291.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_3a16409" cx="9" cy="2267.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_96cb313" cx="9" cy="2243.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_482bfe6" cx="9" cy="2219.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_bb7b9d3" cx="9" cy="2195.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_bc6f1f7" cx="9" cy="2171.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_cef2c4f" cx="24" cy="2147.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_59c7506" cx="9" cy="2123.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_833fa34" cx="9" cy="2099.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_6d5f819" cx="24" cy="2075.000030517578" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_953bca5" cx="9" cy="2051.000030517578" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_017f8d6" cx="24" cy="2027.0000305175781" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_98d6fee" cx="39" cy="2003.0000305175781" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_82d8e0b" cx="9" cy="1979.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_6083327" cx="9" cy="1955.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_3a5ff12" cx="9" cy="1931.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_d6efb51" cx="9" cy="1907.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_7ab4fcd" cx="24" cy="1883.0000305175781" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_d1c9b64" cx="9" cy="1859.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_2815f1d" cx="9" cy="1835.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_897c93d" cx="9" cy="1811.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0bdab27" cx="9" cy="1787.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0e70c23" cx="9" cy="1763.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_a343aea" cx="9" cy="1739.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_5661f6f" cx="9" cy="1715.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_6add7f9" cx="9" cy="1691.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_3c139b3" cx="9" cy="1667.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_4214834" cx="9" cy="1643.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_9869154" cx="9" cy="1619.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_bbbd983" cx="24" cy="1595.0000305175781" r="4" fill="#dc4132" stroke="none"></circle>
+                    <circle id="C_c2e240c" cx="39" cy="1571.0000305175781" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_2efb049" cx="24" cy="1547.0000305175781" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_ec4512d" cx="24" cy="1523.0000305175781" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_c8546ab" cx="9" cy="1499.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0e0519a" cx="39" cy="1475.0000305175781" r="4" fill="#f7786b" stroke="none"></circle>
+                    <circle id="C_db5e027" cx="54" cy="1451.0000305175781" r="4" fill="#fae03c" stroke="none"></circle>
+                    <circle id="C_e703da3" cx="69" cy="1427.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_b59b71f" cx="69" cy="1403.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_4c4f20d" cx="84" cy="1379.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_ca4ccf3" cx="84" cy="1355.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_9506784" cx="84" cy="1331.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_e8b1942" cx="84" cy="1307.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_e225681" cx="84" cy="1283.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_a67c82b" cx="84" cy="1259.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_829c42b" cx="84" cy="1235.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_ebbd47e" cx="84" cy="1211.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_6df4e8e" cx="84" cy="1187.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_7a3a4d4" cx="84" cy="1163.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_b8e871d" cx="69" cy="1139.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_f81cdae" cx="69" cy="1115.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_b12710d" cx="69" cy="1091.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_92dc0b2" cx="69" cy="1067.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_44de500" cx="84" cy="1043.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_722f7e7" cx="69" cy="1019.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_bbe2ede" cx="69" cy="995.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_3d24bfc" cx="69" cy="971.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_7aa0178" cx="69" cy="947.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_7a599b7" cx="69" cy="923.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_65c50ae" cx="69" cy="899.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_96970d7" cx="84" cy="875.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_9f384ab" cx="69" cy="851.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_7521236" cx="69" cy="827.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_d358c7e" cx="69" cy="803.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_9632108" cx="84" cy="779.0000305175781" r="4" fill="#9896a4" stroke="none"></circle>
+                    <circle id="C_e6a4552" cx="69" cy="755.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_a50658f" cx="69" cy="731.0000305175781" r="4" fill="#98ddde" stroke="none"></circle>
+                    <circle id="C_019f421" cx="9" cy="707.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_2a728be" cx="9" cy="683.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_ac8b767" cx="9" cy="659.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_81e727d" cx="9" cy="635.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_04c6b63" cx="9" cy="611.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_6e9361e" cx="9" cy="587.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_060c89d" cx="9" cy="563.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_a401dc1" cx="9" cy="539.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_7b304cc" cx="9" cy="515.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_049b117" cx="9" cy="491.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_71ef4c1" cx="9" cy="467.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_033b9bb" cx="9" cy="443.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_59f1c29" cx="9" cy="419.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_45dc970" cx="9" cy="395.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_75169f0" cx="9" cy="371.0000305175781" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_043fc29" cx="9" cy="347" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0e55bea" cx="9" cy="323" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_5663f1e" cx="9" cy="299" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_0873c60" cx="24" cy="275" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_cdf2430" cx="9" cy="251" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_1d0412d" cx="24" cy="227" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_0c44e62" cx="9" cy="203" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_a16edfd" cx="24" cy="179" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_1648afe" cx="9" cy="155" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_1707592" cx="24" cy="131" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_394c323" cx="9" cy="107" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_2c61cb6" cx="24" cy="83" r="4" fill="#79c753" stroke="none"></circle>
+                    <circle id="C_0bc5d0e" cx="9" cy="59" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_1631cf7" cx="9" cy="35" r="4" fill="#034f84" stroke="none"></circle>
+                    <circle id="C_e5096d1" cx="9" cy="11" r="4" fill="#034f84" stroke="none"></circle>
+                </svg>
+            </td>
+            <td style="width: 99%; vertical-align: top;"></td>
+        </tr>
+        <tr id="T_e5096d1" data-commitid="e5096d1">
+            <td class="commit">e5096d1</td>
+            <td class="d"> Adds-twitter-support-to-fixsocials
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1631cf7" data-commitid="1631cf7">
+            <td class="commit">1631cf7</td>
+            <td class="d"> Make-all-cog-commands-into-a-group-and-fixed-sendasme
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0bc5d0e" data-commitid="0bc5d0e">
+            <td class="commit">0bc5d0e</td>
+            <td class="d"> Merge-pull-request-5-from-Pearl-Codes-deepsource-fix-d624213e
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2c61cb6" data-commitid="2c61cb6">
+            <td class="commit">2c61cb6</td>
+            <td class="d"> Remove-duplicate-dictionary-key-s
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_394c323" data-commitid="394c323">
+            <td class="commit">394c323</td>
+            <td class="d"> Merge-pull-request-4-from-Pearl-Codes-deepsource-fix-e9836643
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1707592" data-commitid="1707592">
+            <td class="commit">1707592</td>
+            <td class="d"> Fix-dangerous-default-argument
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1648afe" data-commitid="1648afe">
+            <td class="commit">1648afe</td>
+            <td class="d"> Merge-pull-request-3-from-Pearl-Codes-deepsource-fix-5c21f8a7
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a16edfd" data-commitid="a16edfd">
+            <td class="commit">a16edfd</td>
+            <td class="d"> Use-identity-check-for-comparison-to-a-singleton
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0c44e62" data-commitid="0c44e62">
+            <td class="commit">0c44e62</td>
+            <td class="d"> Merge-pull-request-2-from-Pearl-Codes-deepsource-fix-38b1145f
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1d0412d" data-commitid="1d0412d">
+            <td class="commit">1d0412d</td>
+            <td class="d"> Remove-assert-statement-from-non-test-files
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_cdf2430" data-commitid="cdf2430">
+            <td class="commit">cdf2430</td>
+            <td class="d"> Merge-pull-request-1-from-Pearl-Codes-deepsource-fix-d14580d7
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0873c60" data-commitid="0873c60">
+            <td class="commit">0873c60</td>
+            <td class="d"> Use-sys.exit-calls
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_5663f1e" data-commitid="5663f1e">
+            <td class="commit">5663f1e</td>
+            <td class="d"> Add-.deepsource.toml
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0e55bea" data-commitid="0e55bea">
+            <td class="commit">0e55bea</td>
+            <td class="d"> load-command
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_043fc29" data-commitid="043fc29">
+            <td class="commit">043fc29</td>
+            <td class="d"> Sleepyboi-suggested-it-has-a-1-in-10000-chance-to-insult-you-when-sending-songs-so-I-added-it-lmao
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_75169f0" data-commitid="75169f0">
+            <td class="commit">75169f0</td>
+            <td class="d"> Finally-change-the-DM-to-show-mute-reasons
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_45dc970" data-commitid="45dc970">
+            <td class="commit">45dc970</td>
+            <td class="d"> TRUST-ME-I-DID-CHANGE-THAT-CODE-SLEEPYBOI
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_59f1c29" data-commitid="59f1c29">
+            <td class="commit">59f1c29</td>
+            <td class="d"> Role-naming-changes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_033b9bb" data-commitid="033b9bb">
+            <td class="commit">033b9bb</td>
+            <td class="d"> theres-too-many-changes-i-cba-explaining-them-all
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_71ef4c1" data-commitid="71ef4c1">
+            <td class="commit">71ef4c1</td>
+            <td class="d"> remove-docker-stuff
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_049b117" data-commitid="049b117">
+            <td class="commit">049b117</td>
+            <td class="d"> change-pronouns-in-sabbath.py-probably-won-t-use-this-extention-but-if-i-need-it-i-ll-enable-it
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7b304cc" data-commitid="7b304cc">
+            <td class="commit">7b304cc</td>
+            <td class="d"> Change-description-of-stats
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a401dc1" data-commitid="a401dc1">
+            <td class="commit">a401dc1</td>
+            <td class="d"> Disable-a-bunch-of-r-jailbreak-specific-extentions
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_060c89d" data-commitid="060c89d">
+            <td class="commit">060c89d</td>
+            <td class="d"> according-to-pycharm-these-arnt-versioned-so-fuck-it
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6e9361e" data-commitid="6e9361e">
+            <td class="commit">6e9361e</td>
+            <td class="d"> pretty-new-readme
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_04c6b63" data-commitid="04c6b63">
+            <td class="commit">04c6b63</td>
+            <td class="d"> GPLv3-is-based
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_81e727d" data-commitid="81e727d">
+            <td class="commit">81e727d</td>
+            <td class="d"> Delete-LICENSE.md
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ac8b767" data-commitid="ac8b767">
+            <td class="commit">ac8b767</td>
+            <td class="d"> Merge-pull-request-18-from-BomberFish-patch-2
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2a728be" data-commitid="2a728be">
+            <td class="commit">2a728be</td>
+            <td class="d"> Merge-pull-request-17-from-BomberFish-patch-1
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_019f421" data-commitid="019f421">
+            <td class="commit">019f421</td>
+            <td class="d"> Merge-pull-request-14-from-0xallie-fix-thread-terminology
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a50658f" data-commitid="a50658f">
+            <td class="commit">a50658f</td>
+            <td class="d"> Merge-branch-main-of-https-github.com-junepark678-GIRRewrite
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e6a4552" data-commitid="e6a4552">
+            <td class="commit">e6a4552</td>
+            <td class="d"> STOP-THIS-MADNESS-disable-reaction-logging
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9632108" data-commitid="9632108">
+            <td class="commit">9632108</td>
+            <td class="d"> profanity.py-UNUSED-notice
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_d358c7e" data-commitid="d358c7e">
+            <td class="commit">d358c7e</td>
+            <td class="d"> shit
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7521236" data-commitid="7521236">
+            <td class="commit">7521236</td>
+            <td class="d"> Merge-branch-main-of-https-github.com-junepark678-GIRRewrite
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9f384ab" data-commitid="9f384ab">
+            <td class="commit">9f384ab</td>
+            <td class="d"> ffs
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_96970d7" data-commitid="96970d7">
+            <td class="commit">96970d7</td>
+            <td class="d"> fix-filter-from-not-working
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_65c50ae" data-commitid="65c50ae">
+            <td class="commit">65c50ae</td>
+            <td class="d"> Yeah-Filter-was-a-hole
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7a599b7" data-commitid="7a599b7">
+            <td class="commit">7a599b7</td>
+            <td class="d"> Yeah-Filter-was-a-hole
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7aa0178" data-commitid="7aa0178">
+            <td class="commit">7aa0178</td>
+            <td class="d"> Yeah-Filter-was-a-hole
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3d24bfc" data-commitid="3d24bfc">
+            <td class="commit">3d24bfc</td>
+            <td class="d"> Yeah-Filter-was-a-hole
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_bbe2ede" data-commitid="bbe2ede">
+            <td class="commit">bbe2ede</td>
+            <td class="d"> Merge-branch-main-of-https-github.com-junepark678-GIRRewrite
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_722f7e7" data-commitid="722f7e7">
+            <td class="commit">722f7e7</td>
+            <td class="d"> bruh
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_44de500" data-commitid="44de500">
+            <td class="commit">44de500</td>
+            <td class="d"> fix-filter
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_92dc0b2" data-commitid="92dc0b2">
+            <td class="commit">92dc0b2</td>
+            <td class="d"> nothing
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b12710d" data-commitid="b12710d">
+            <td class="commit">b12710d</td>
+            <td class="d"> Added-profanity-filter.-Rerun-pip
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_f81cdae" data-commitid="f81cdae">
+            <td class="commit">f81cdae</td>
+            <td class="d"> add-a-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b8e871d" data-commitid="b8e871d">
+            <td class="commit">b8e871d</td>
+            <td class="d"> reset-things
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7a3a4d4" data-commitid="7a3a4d4">
+            <td class="commit">7a3a4d4</td>
+            <td class="d"> ffs
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6df4e8e" data-commitid="6df4e8e">
+            <td class="commit">6df4e8e</td>
+            <td class="d"> broke-the-broke-again
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ebbd47e" data-commitid="ebbd47e">
+            <td class="commit">ebbd47e</td>
+            <td class="d"> managed-to-break-horrible-code-to-make-more-horrible-code-to-break
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_829c42b" data-commitid="829c42b">
+            <td class="commit">829c42b</td>
+            <td class="d"> don-t-look-at-this-code-please
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a67c82b" data-commitid="a67c82b">
+            <td class="commit">a67c82b</td>
+            <td class="d"> based
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e225681" data-commitid="e225681">
+            <td class="commit">e225681</td>
+            <td class="d"> old-commit-but-i-didn-t-save
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e8b1942" data-commitid="e8b1942">
+            <td class="commit">e8b1942</td>
+            <td class="d"> remove-the-stupid-autoname-for-role-buttons
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9506784" data-commitid="9506784">
+            <td class="commit">9506784</td>
+            <td class="d"> oh-god
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ca4ccf3" data-commitid="ca4ccf3">
+            <td class="commit">ca4ccf3</td>
+            <td class="d"> re
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_4c4f20d" data-commitid="4c4f20d">
+            <td class="commit">4c4f20d</td>
+            <td class="d"> done
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b59b71f" data-commitid="b59b71f">
+            <td class="commit">b59b71f</td>
+            <td class="d"> Our-server-setup-in-setup.py-makes-getting-the-development-enviroment-setup-wayy-easier
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e703da3" data-commitid="e703da3">
+            <td class="commit">e703da3</td>
+            <td class="d"> changes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_db5e027" data-commitid="db5e027">
+            <td class="commit">db5e027</td>
+            <td class="d"> Fix-2-more-typos
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0e0519a" data-commitid="0e0519a">
+            <td class="commit">0e0519a</td>
+            <td class="d"> Fix-typo-in-xp-description
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_c8546ab" data-commitid="c8546ab">
+            <td class="commit">c8546ab</td>
+            <td class="d"> Fix-tiktok-embeds
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ec4512d" data-commitid="ec4512d">
+            <td class="commit">ec4512d</td>
+            <td class="d"> REmove-unnecessary-prints
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2efb049" data-commitid="2efb049">
+            <td class="commit">2efb049</td>
+            <td class="d"> hot-fix
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_c2e240c" data-commitid="c2e240c">
+            <td class="commit">c2e240c</td>
+            <td class="d"> Possibly-fix-tiktok-embeds
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_bbbd983" data-commitid="bbbd983">
+            <td class="commit">bbbd983</td>
+            <td class="d"> fix-thread-terminology
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9869154" data-commitid="9869154">
+            <td class="commit">9869154</td>
+            <td class="d"> Close-new-thread-in-forum-channel-if-user-already-has-one-open
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_4214834" data-commitid="4214834">
+            <td class="commit">4214834</td>
+            <td class="d"> Added-fix-instagram
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3c139b3" data-commitid="3c139b3">
+            <td class="commit">3c139b3</td>
+            <td class="d"> Hotfix
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6add7f9" data-commitid="6add7f9">
+            <td class="commit">6add7f9</td>
+            <td class="d"> Post-embeds-for-tiktoks-similar-to-fxtwitter
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_5661f6f" data-commitid="5661f6f">
+            <td class="commit">5661f6f</td>
+            <td class="d"> Add-defers-to-solve-timeout-issue-thanks-Discord
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a343aea" data-commitid="a343aea">
+            <td class="commit">a343aea</td>
+            <td class="d"> Possibly-fix-device-add
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0e70c23" data-commitid="0e70c23">
+            <td class="commit">0e70c23</td>
+            <td class="d"> Added-ability-to-ignore-channels-in-logging
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0bdab27" data-commitid="0bdab27">
+            <td class="commit">0bdab27</td>
+            <td class="d"> make-discord-invites-not-an-automatic-raid-phrase
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_897c93d" data-commitid="897c93d">
+            <td class="commit">897c93d</td>
+            <td class="d"> hotfix
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2815f1d" data-commitid="2815f1d">
+            <td class="commit">2815f1d</td>
+            <td class="d"> Merge-pull-request-13-from-emiyl-patch-3
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_d1c9b64" data-commitid="d1c9b64">
+            <td class="commit">d1c9b64</td>
+            <td class="d"> Added-member-ultra
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7ab4fcd" data-commitid="7ab4fcd">
+            <td class="commit">7ab4fcd</td>
+            <td class="d"> omit-identifiers-on-devices-without-identifiers
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_d6efb51" data-commitid="d6efb51">
+            <td class="commit">d6efb51</td>
+            <td class="d"> Hotfix-for-brand-names-of-devices
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3a5ff12" data-commitid="3a5ff12">
+            <td class="commit">3a5ff12</td>
+            <td class="d"> lol
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6083327" data-commitid="6083327">
+            <td class="commit">6083327</td>
+            <td class="d"> Merge-pull-request-12-from-itsnebulalol-patch-1
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_82d8e0b" data-commitid="82d8e0b">
+            <td class="commit">82d8e0b</td>
+            <td class="d"> Merge-pull-request-11-from-emiyl-patch-2
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_98d6fee" data-commitid="98d6fee">
+            <td class="commit">98d6fee</td>
+            <td class="d"> Fix-emojis-in-dstatus-command
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_017f8d6" data-commitid="017f8d6">
+            <td class="commit">017f8d6</td>
+            <td class="d"> identifiers-are-now-arrays
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_953bca5" data-commitid="953bca5">
+            <td class="commit">953bca5</td>
+            <td class="d"> Merge-pull-request-10-from-emiyl-patch-1
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6d5f819" data-commitid="6d5f819">
+            <td class="commit">6d5f819</td>
+            <td class="d"> use-new-webp-images
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_833fa34" data-commitid="833fa34">
+            <td class="commit">833fa34</td>
+            <td class="d"> Merge-pull-request-9-from-TheRealKeto-qol-song-update
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_59c7506" data-commitid="59c7506">
+            <td class="commit">59c7506</td>
+            <td class="d"> Make-xp-whisper
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_cef2c4f" data-commitid="cef2c4f">
+            <td class="commit">cef2c4f</td>
+            <td class="d"> songs.py-Allow-links-with-to-be-matched
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_bc6f1f7" data-commitid="bc6f1f7">
+            <td class="commit">bc6f1f7</td>
+            <td class="d"> Fix-issue-with-signing-status-for-firmware
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_bb7b9d3" data-commitid="bb7b9d3">
+            <td class="commit">bb7b9d3</td>
+            <td class="d"> Post-your-own-xp-without-a-whisper
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_482bfe6" data-commitid="482bfe6">
+            <td class="commit">482bfe6</td>
+            <td class="d"> More-fixes-to-AppleDB
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_96cb313" data-commitid="96cb313">
+            <td class="commit">96cb313</td>
+            <td class="d"> Several-more-fixes-for-AppleDB
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3a16409" data-commitid="3a16409">
+            <td class="commit">3a16409</td>
+            <td class="d"> This-does-not-need-to-be-a-whisper
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7d7275f" data-commitid="7d7275f">
+            <td class="commit">7d7275f</td>
+            <td class="d"> We-don-t-need-this-command-anymore-device-list
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_dcbdcd4" data-commitid="dcbdcd4">
+            <td class="commit">dcbdcd4</td>
+            <td class="d"> Fix-solved-issue-when-thread-owner-leaves-server
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9e3fa66" data-commitid="9e3fa66">
+            <td class="commit">9e3fa66</td>
+            <td class="d"> Various-fixes-to-AppleDB
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b7259ea" data-commitid="b7259ea">
+            <td class="commit">b7259ea</td>
+            <td class="d"> Minor-fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0038d70" data-commitid="0038d70">
+            <td class="commit">0038d70</td>
+            <td class="d"> Some-fixes-for-cfw.guide-improved-sorting-for-devices
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_4ed3085" data-commitid="4ed3085">
+            <td class="commit">4ed3085</td>
+            <td class="d"> Make-jailbreak-only-work-in-jb-and-genius-bar
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_f4992db" data-commitid="f4992db">
+            <td class="commit">f4992db</td>
+            <td class="d"> Fix-issue-with-transferprofile
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b89e365" data-commitid="b89e365">
+            <td class="commit">b89e365</td>
+            <td class="d"> Extra-check-for-snipe
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_59f7fa7" data-commitid="59f7fa7">
+            <td class="commit">59f7fa7</td>
+            <td class="d"> Added-snipe-command
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_d029cec" data-commitid="d029cec">
+            <td class="commit">d029cec</td>
+            <td class="d"> Fix-VC-logging-bug
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_390f45c" data-commitid="390f45c">
+            <td class="commit">390f45c</td>
+            <td class="d"> Update-cfw.guide-description
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_d052445" data-commitid="d052445">
+            <td class="commit">d052445</td>
+            <td class="d"> Fix-a-bug-with-avatar
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_bb4d8b6" data-commitid="bb4d8b6">
+            <td class="commit">bb4d8b6</td>
+            <td class="d"> Permissions-fix-for-solved
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_47f386c" data-commitid="47f386c">
+            <td class="commit">47f386c</td>
+            <td class="d"> Migrate-sharerepo-to-repomcrepoface
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ef74ae5" data-commitid="ef74ae5">
+            <td class="commit">ef74ae5</td>
+            <td class="d"> Hotfix-more-error-handling
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_21e3a5e" data-commitid="21e3a5e">
+            <td class="commit">21e3a5e</td>
+            <td class="d"> Improved-casestats-with-searching-by-reason
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_8c35676" data-commitid="8c35676">
+            <td class="commit">8c35676</td>
+            <td class="d"> Give-poll-and-say-images
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_4f7d94f" data-commitid="4f7d94f">
+            <td class="commit">4f7d94f</td>
+            <td class="d"> Fix-a-filter-bug
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0dde616" data-commitid="0dde616">
+            <td class="commit">0dde616</td>
+            <td class="d"> Fix-a-bug-with-warn-case-logging
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9ef9aba" data-commitid="9ef9aba">
+            <td class="commit">9ef9aba</td>
+            <td class="d"> Remind-user-to-close-thread-when-they-open-one
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a903b39" data-commitid="a903b39">
+            <td class="commit">a903b39</td>
+            <td class="d"> allow-OP-to-delete-their-own-thread
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a9f67c0" data-commitid="a9f67c0">
+            <td class="commit">a9f67c0</td>
+            <td class="d"> Extra-permission-check
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_f9b177d" data-commitid="f9b177d">
+            <td class="commit">f9b177d</td>
+            <td class="d"> Add-solved-command-for-forum-threads
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1624c2a" data-commitid="1624c2a">
+            <td class="commit">1624c2a</td>
+            <td class="d"> Voice-chat-logging
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_458ab12" data-commitid="458ab12">
+            <td class="commit">458ab12</td>
+            <td class="d"> Allow-editreason-on-external-users
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_fdb7440" data-commitid="fdb7440">
+            <td class="commit">fdb7440</td>
+            <td class="d"> Update-links-for-cfw.guide
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3517f3f" data-commitid="3517f3f">
+            <td class="commit">3517f3f</td>
+            <td class="d"> Fix-command-handler-update-discord.py.-Handle-timeouts-better
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2ae26a7" data-commitid="2ae26a7">
+            <td class="commit">2ae26a7</td>
+            <td class="d"> Fix-an-issue-with-context-commands
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2ce9ccd" data-commitid="2ce9ccd">
+            <td class="commit">2ce9ccd</td>
+            <td class="d"> Fix-for-buttons-set
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_8937118" data-commitid="8937118">
+            <td class="commit">8937118</td>
+            <td class="d"> Fixed-some-weird-button-behavior-for-canijailbreak
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ca07c79" data-commitid="ca07c79">
+            <td class="commit">ca07c79</td>
+            <td class="d"> Hotfix-for-timezone-list
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_43f7fde" data-commitid="43f7fde">
+            <td class="commit">43f7fde</td>
+            <td class="d"> Delete-unused-script
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_dd445bc" data-commitid="dd445bc">
+            <td class="commit">dd445bc</td>
+            <td class="d"> Another-cfw.guide-fix
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_8ed52ba" data-commitid="8ed52ba">
+            <td class="commit">8ed52ba</td>
+            <td class="d"> Fixes-to-command-logging-add-what-channel-it-was-used-in
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0d2ea7b" data-commitid="0d2ea7b">
+            <td class="commit">0d2ea7b</td>
+            <td class="d"> timezone-list-hint-for-timezone-set-to-pick-a-country
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_5b10d01" data-commitid="5b10d01">
+            <td class="commit">5b10d01</td>
+            <td class="d"> Added-timezone-commands-to-set-and-view-local-time-for-users
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_158733c" data-commitid="158733c">
+            <td class="commit">158733c</td>
+            <td class="d"> Update-readme
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_625ca0e" data-commitid="625ca0e">
+            <td class="commit">625ca0e</td>
+            <td class="d"> Another-fix-to-cij-yay
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ca97be2" data-commitid="ca97be2">
+            <td class="commit">ca97be2</td>
+            <td class="d"> Make-staffban-mods-and-up-update-message
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_db0358e" data-commitid="db0358e">
+            <td class="commit">db0358e</td>
+            <td class="d"> Fix-deviceinfo
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6835c5f" data-commitid="6835c5f">
+            <td class="commit">6835c5f</td>
+            <td class="d"> staffban
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7cdfc5a" data-commitid="7cdfc5a">
+            <td class="commit">7cdfc5a</td>
+            <td class="d"> Fix-a-missing-emote
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e51ce96" data-commitid="e51ce96">
+            <td class="commit">e51ce96</td>
+            <td class="d"> Fix-for-giveaway-end
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_50dac01" data-commitid="50dac01">
+            <td class="commit">50dac01</td>
+            <td class="d"> Fix-userinfo-banner
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2f43d55" data-commitid="2f43d55">
+            <td class="commit">2f43d55</td>
+            <td class="d"> Merge-branch-feature-sync-command-into-main
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_798bf3e" data-commitid="798bf3e">
+            <td class="commit">798bf3e</td>
+            <td class="d"> Another-fix
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_03a1304" data-commitid="03a1304">
+            <td class="commit">03a1304</td>
+            <td class="d"> More-cij-fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_291a62b" data-commitid="291a62b">
+            <td class="commit">291a62b</td>
+            <td class="d"> cij-fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_852094f" data-commitid="852094f">
+            <td class="commit">852094f</td>
+            <td class="d"> Fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_dee3827" data-commitid="dee3827">
+            <td class="commit">dee3827</td>
+            <td class="d"> Merge-pull-request-4-from-captinc-main
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_f5d7906" data-commitid="f5d7906">
+            <td class="commit">f5d7906</td>
+            <td class="d"> Update-banner-picture
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_03852f1" data-commitid="03852f1">
+            <td class="commit">03852f1</td>
+            <td class="d"> Extra-check
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9665fdf" data-commitid="9665fdf">
+            <td class="commit">9665fdf</td>
+            <td class="d"> Test-sync-command
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b97696b" data-commitid="b97696b">
+            <td class="commit">b97696b</td>
+            <td class="d"> Merge-pull-request-3-from-stekc-fix-buttoncord-migration
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3a56471" data-commitid="3a56471">
+            <td class="commit">3a56471</td>
+            <td class="d"> Migrate-emojis-used-throughout-the-bot-to-buttoncord
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_8d57561" data-commitid="8d57561">
+            <td class="commit">8d57561</td>
+            <td class="d"> Remove-labels-on-song-buttons
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9a501e7" data-commitid="9a501e7">
+            <td class="commit">9a501e7</td>
+            <td class="d"> Update-readme
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_8529c8c" data-commitid="8529c8c">
+            <td class="commit">8529c8c</td>
+            <td class="d"> Push-all-code-welcome-to-the-rewrite
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ff6e8a8" data-commitid="ff6e8a8">
+            <td class="commit">ff6e8a8</td>
+            <td class="d"> Rename-all-references-to-Bloo
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0bd2188" data-commitid="0bd2188">
+            <td class="commit">0bd2188</td>
+            <td class="d"> Change-some-emotes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2c047a9" data-commitid="2c047a9">
+            <td class="commit">2c047a9</td>
+            <td class="d"> Fix-for-logging-command-usage
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_79e129f" data-commitid="79e129f">
+            <td class="commit">79e129f</td>
+            <td class="d"> Sync-commands-in-dockerfile-for-prod
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_5c56f13" data-commitid="5c56f13">
+            <td class="commit">5c56f13</td>
+            <td class="d"> Push-some-files-needed-for-deployment
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_eb484dc" data-commitid="eb484dc">
+            <td class="commit">eb484dc</td>
+            <td class="d"> Use-buttoncord-emotes-for-songs
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9d2b88a" data-commitid="9d2b88a">
+            <td class="commit">9d2b88a</td>
+            <td class="d"> Fix-command-ban-filtering
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_11aaab0" data-commitid="11aaab0">
+            <td class="commit">11aaab0</td>
+            <td class="d"> Add-filtering-to-commands-some-cleanup-a-transformer-fix
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a51cdd1" data-commitid="a51cdd1">
+            <td class="commit">a51cdd1</td>
+            <td class="d"> Revert-to-old-logging
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_273842b" data-commitid="273842b">
+            <td class="commit">273842b</td>
+            <td class="d"> New-help-command
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_86c9b30" data-commitid="86c9b30">
+            <td class="commit">86c9b30</td>
+            <td class="d"> Merge-pull-request-2-from-DiscordGIR-feat-dropdown-repo-icons
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ed6808d" data-commitid="ed6808d">
+            <td class="commit">ed6808d</td>
+            <td class="d"> Fix-repo-button-icon
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_5b82b02" data-commitid="5b82b02">
+            <td class="commit">5b82b02</td>
+            <td class="d"> Many-small-fixes-add-buttons-back-to-repo
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e2273df" data-commitid="e2273df">
+            <td class="commit">e2273df</td>
+            <td class="d"> Some-fixes-add-tag-prefixed-command
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2be25fc" data-commitid="2be25fc">
+            <td class="commit">2be25fc</td>
+            <td class="d"> Merge-branch-development-into-feat-dropdown-repo-icons
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1b26145" data-commitid="1b26145">
+            <td class="commit">1b26145</td>
+            <td class="d"> Minor-fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b86f578" data-commitid="b86f578">
+            <td class="commit">b86f578</td>
+            <td class="d"> Add-repo-icons-to-Canister-dropdown
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1ef0f30" data-commitid="1ef0f30">
+            <td class="commit">1ef0f30</td>
+            <td class="d"> Add-back-a-missing-button
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3fea51f" data-commitid="3fea51f">
+            <td class="commit">3fea51f</td>
+            <td class="d"> Mooooore-fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6f657d6" data-commitid="6f657d6">
+            <td class="commit">6f657d6</td>
+            <td class="d"> More-minor-fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_077714c" data-commitid="077714c">
+            <td class="commit">077714c</td>
+            <td class="d"> A-fixie
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_56802ed" data-commitid="56802ed">
+            <td class="commit">56802ed</td>
+            <td class="d"> Many-small-fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a77a3f6" data-commitid="a77a3f6">
+            <td class="commit">a77a3f6</td>
+            <td class="d"> More-migrations-last-context-commands
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_0798790" data-commitid="0798790">
+            <td class="commit">0798790</td>
+            <td class="d"> Migrations-more-context-commands
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2679407" data-commitid="2679407">
+            <td class="commit">2679407</td>
+            <td class="d"> Structure-for-context-commands
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_fecc0dd" data-commitid="fecc0dd">
+            <td class="commit">fecc0dd</td>
+            <td class="d"> Cleanup
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_61a3be4" data-commitid="61a3be4">
+            <td class="commit">61a3be4</td>
+            <td class="d"> Fixies
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_395f6cd" data-commitid="395f6cd">
+            <td class="commit">395f6cd</td>
+            <td class="d"> Image-transformer
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_992bdae" data-commitid="992bdae">
+            <td class="commit">992bdae</td>
+            <td class="d"> Modutils
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_977e55e" data-commitid="977e55e">
+            <td class="commit">977e55e</td>
+            <td class="d"> Finish-modactions
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_af3e097" data-commitid="af3e097">
+            <td class="commit">af3e097</td>
+            <td class="d"> More-commands-transformers
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1dc1fb4" data-commitid="1dc1fb4">
+            <td class="commit">1dc1fb4</td>
+            <td class="d"> Added-mute-potentially-improve-respond_or_edit
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_d637f24" data-commitid="d637f24">
+            <td class="commit">d637f24</td>
+            <td class="d"> More-transformer
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2ed3d5a" data-commitid="2ed3d5a">
+            <td class="commit">2ed3d5a</td>
+            <td class="d"> Started-work-on-modactions-a-hotfix
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_97c0abc" data-commitid="97c0abc">
+            <td class="commit">97c0abc</td>
+            <td class="d"> Filter-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_609237c" data-commitid="609237c">
+            <td class="commit">609237c</td>
+            <td class="d"> Antiraid-cogs
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_4f9ada0" data-commitid="4f9ada0">
+            <td class="commit">4f9ada0</td>
+            <td class="d"> Unban-appeals-monitor
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_93d4291" data-commitid="93d4291">
+            <td class="commit">93d4291</td>
+            <td class="d"> Added-booster-emojis-jailbreak-monitors-role-buttons
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1738af7" data-commitid="1738af7">
+            <td class="commit">1738af7</td>
+            <td class="d"> Add-booster-emojis-back
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ca44a69" data-commitid="ca44a69">
+            <td class="commit">ca44a69</td>
+            <td class="d"> Add-blootooth-back
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_19d4a9a" data-commitid="19d4a9a">
+            <td class="commit">19d4a9a</td>
+            <td class="d"> Fix-mute-button
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_595c55c" data-commitid="595c55c">
+            <td class="commit">595c55c</td>
+            <td class="d"> Fix-ban-cache
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_db9cef4" data-commitid="db9cef4">
+            <td class="commit">db9cef4</td>
+            <td class="d"> Started-reimplementing-antiraid
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_af2d549" data-commitid="af2d549">
+            <td class="commit">af2d549</td>
+            <td class="d"> Slight-Cleanup
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a938003" data-commitid="a938003">
+            <td class="commit">a938003</td>
+            <td class="d"> Scam-jb-filter
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b1de039" data-commitid="b1de039">
+            <td class="commit">b1de039</td>
+            <td class="d"> Finished-report
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e0bbe33" data-commitid="e0bbe33">
+            <td class="commit">e0bbe33</td>
+            <td class="d"> More-improvements
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_c309af6" data-commitid="c309af6">
+            <td class="commit">c309af6</td>
+            <td class="d"> ban-in-report
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_79c9bd1" data-commitid="79c9bd1">
+            <td class="commit">79c9bd1</td>
+            <td class="d"> Started-work-on-filter-reports-etc.-holy-shit
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_4fe5155" data-commitid="4fe5155">
+            <td class="commit">4fe5155</td>
+            <td class="d"> Slight-refactor
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_4783bed" data-commitid="4783bed">
+            <td class="commit">4783bed</td>
+            <td class="d"> Sabbath
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1e442de" data-commitid="1e442de">
+            <td class="commit">1e442de</td>
+            <td class="d"> Refactor-birthday-and-songs-cogs
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_c7993a3" data-commitid="c7993a3">
+            <td class="commit">c7993a3</td>
+            <td class="d"> Meme-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6f5bd06" data-commitid="6f5bd06">
+            <td class="commit">6f5bd06</td>
+            <td class="d"> Some-formatting-for-canister
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_40e3032" data-commitid="40e3032">
+            <td class="commit">40e3032</td>
+            <td class="d"> Canister-complete
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9d3ae36" data-commitid="9d3ae36">
+            <td class="commit">9d3ae36</td>
+            <td class="d"> Improved-canister-implementation
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_471846c" data-commitid="471846c">
+            <td class="commit">471846c</td>
+            <td class="d"> More
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_57ae7a5" data-commitid="57ae7a5">
+            <td class="commit">57ae7a5</td>
+            <td class="d"> Canister-jump-button
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_eddee95" data-commitid="eddee95">
+            <td class="commit">eddee95</td>
+            <td class="d"> I-am-not-proud-of-this-but-fix-Canister
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_eace5a5" data-commitid="eace5a5">
+            <td class="commit">eace5a5</td>
+            <td class="d"> Incomplete-canister-code-probably-needs-to-be-rewritte
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6f65f80" data-commitid="6f65f80">
+            <td class="commit">6f65f80</td>
+            <td class="d"> Giveaway-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6a9f445" data-commitid="6a9f445">
+            <td class="commit">6a9f445</td>
+            <td class="d"> add-bypass
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9bc6aae" data-commitid="9bc6aae">
+            <td class="commit">9bc6aae</td>
+            <td class="d"> fix-menus-AGAIN
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a512907" data-commitid="a512907">
+            <td class="commit">a512907</td>
+            <td class="d"> Almost-completed-cfw.guide-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_51b5f26" data-commitid="51b5f26">
+            <td class="commit">51b5f26</td>
+            <td class="d"> Fucking-fix-menus
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_88bd6ab" data-commitid="88bd6ab">
+            <td class="commit">88bd6ab</td>
+            <td class="d"> Fixes
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_325cb95" data-commitid="325cb95">
+            <td class="commit">325cb95</td>
+            <td class="d"> Refactor-fetchers-into-their-own-file
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3c8a6be" data-commitid="3c8a6be">
+            <td class="commit">3c8a6be</td>
+            <td class="d"> most-of-the-misc-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7bf52a4" data-commitid="7bf52a4">
+            <td class="commit">7bf52a4</td>
+            <td class="d"> Finish-up-genius-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_bba0e45" data-commitid="bba0e45">
+            <td class="commit">bba0e45</td>
+            <td class="d"> CommonIssue-new-edit-fixes-postembed
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_410ba1d" data-commitid="410ba1d">
+            <td class="commit">410ba1d</td>
+            <td class="d"> common-issue-edit
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a965955" data-commitid="a965955">
+            <td class="commit">a965955</td>
+            <td class="d"> Updated-dev-dockerfile
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9e38aa2" data-commitid="9e38aa2">
+            <td class="commit">9e38aa2</td>
+            <td class="d"> merge
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_7723695" data-commitid="7723695">
+            <td class="commit">7723695</td>
+            <td class="d"> commonissue-new
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_f47b0ac" data-commitid="f47b0ac">
+            <td class="commit">f47b0ac</td>
+            <td class="d"> Started-genius-admin
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_43497fa" data-commitid="43497fa">
+            <td class="commit">43497fa</td>
+            <td class="d"> Use-autocomplete-values-custom-transformers-for-Devices-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3beed04" data-commitid="3beed04">
+            <td class="commit">3beed04</td>
+            <td class="d"> Other-2-device-commands
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_93420c1" data-commitid="93420c1">
+            <td class="commit">93420c1</td>
+            <td class="d"> Started-work-on-porting-Devices
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e208010" data-commitid="e208010">
+            <td class="commit">e208010</td>
+            <td class="d"> Improved-example
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_230ed6d" data-commitid="230ed6d">
+            <td class="commit">230ed6d</td>
+            <td class="d"> feat-port-xp-monitor
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_2a8d4d0" data-commitid="2a8d4d0">
+            <td class="commit">2a8d4d0</td>
+            <td class="d"> feat-port-logging-monitor
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_937de32" data-commitid="937de32">
+            <td class="commit">937de32</td>
+            <td class="d"> feat-add-bans-to-serverinfo
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_46e7cd4" data-commitid="46e7cd4">
+            <td class="commit">46e7cd4</td>
+            <td class="d"> feat-add-radium
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b1b2d8e" data-commitid="b1b2d8e">
+            <td class="commit">b1b2d8e</td>
+            <td class="d"> Better-error-formatting
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_e26a0e6" data-commitid="e26a0e6">
+            <td class="commit">e26a0e6</td>
+            <td class="d"> Slight-refactor-improvements-to-context-implemented-tags-cog
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_1812a7b" data-commitid="1812a7b">
+            <td class="commit">1812a7b</td>
+            <td class="d"> Reimplemented-menus
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_ca7018f" data-commitid="ca7018f">
+            <td class="commit">ca7018f</td>
+            <td class="d"> Implement-many-userinfo-commands
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_05b6728" data-commitid="05b6728">
+            <td class="commit">05b6728</td>
+            <td class="d"> Incomplete-implementation-of-help
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_a2f55de" data-commitid="a2f55de">
+            <td class="commit">a2f55de</td>
+            <td class="d"> Reimplement-permission-checks-as-app-command-checks
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9729f71" data-commitid="9729f71">
+            <td class="commit">9729f71</td>
+            <td class="d"> Implement-permissions-check-decorators-improve-error-handler
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_fd48460" data-commitid="fd48460">
+            <td class="commit">fd48460</td>
+            <td class="d"> incomplete-error-handler-implement-some-more-commands
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_8210499" data-commitid="8210499">
+            <td class="commit">8210499</td>
+            <td class="d"> Fix-syncing-script
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_93bb223" data-commitid="93bb223">
+            <td class="commit">93bb223</td>
+            <td class="d"> Reimplement-permissions-extend-BlooContext-fix-whisper
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_3980497" data-commitid="3980497">
+            <td class="commit">3980497</td>
+            <td class="d"> Sorta-fix-whisper
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_b408937" data-commitid="b408937">
+            <td class="commit">b408937</td>
+            <td class="d"> Bump-and-migrations-to-discord.py-fix-transform_context
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_8c229f9" data-commitid="8c229f9">
+            <td class="commit">8c229f9</td>
+            <td class="d"> Started-work-on-custom-context
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_d0bc434" data-commitid="d0bc434">
+            <td class="commit">d0bc434</td>
+            <td class="d"> Centralized-list-of-cogs-to-load
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_86ae107" data-commitid="86ae107">
+            <td class="commit">86ae107</td>
+            <td class="d"> Improved-imports
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_5c0e778" data-commitid="5c0e778">
+            <td class="commit">5c0e778</td>
+            <td class="d"> Some-light-refactoring
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_fdbe78b" data-commitid="fdbe78b">
+            <td class="commit">fdbe78b</td>
+            <td class="d"> Added-back-database
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_9511419" data-commitid="9511419">
+            <td class="commit">9511419</td>
+            <td class="d"> Push-initial-files-welcome-to-the-port-from-Pycord
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="T_6b8deae" data-commitid="6b8deae">
+            <td class="commit">6b8deae</td>
+            <td class="d"> Initial-commit
+                <span class="icon"></span>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
